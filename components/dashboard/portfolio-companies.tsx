@@ -1,6 +1,7 @@
 "use client"
 
 import { MoreVertical } from "lucide-react"
+import Link from "next/link"
 
 interface Company {
   name: string
@@ -26,9 +27,9 @@ export function PortfolioCompanies() {
           <h3 className="text-base font-semibold text-[#1A1525]">Portfolio Companies</h3>
           <p className="text-[13px] text-[#6B7280] mt-0.5">Overview of all portfolio health metrics</p>
         </div>
-        <button className="bg-[#1A1525] text-white rounded-xl px-5 py-2 text-[13px] font-medium hover:bg-[#2A2535] transition-colors">
+        <Link href="/portfolio-health" className="bg-[#1A1525] text-white rounded-xl px-5 py-2 text-[13px] font-medium hover:bg-[#2A2535] transition-colors">
           View
-        </button>
+        </Link>
       </div>
 
       <div className="space-y-3">

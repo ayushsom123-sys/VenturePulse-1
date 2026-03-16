@@ -3,18 +3,23 @@
 import { useState, useRef, useEffect } from "react"
 import { AlertTriangle, Send, ChevronDown, FileEdit, Users, MessageSquare, List, FileText, Bell } from "lucide-react"
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Legend, ReferenceLine } from "recharts"
+import Link from "next/link"
 
+// Burn Rate vs ROI chart data
+// Burn Rate (yellow): starts high ~800-900, fluctuates 600-900, generally elevated
+// ROI (teal): starts lower ~300-400, gradually grows to ~600-700
+// Lines intersect 3-4 times across the chart
 const chartData = [
-  { x: 0, roi: 520, burn: 280 },
-  { x: 1, roi: 680, burn: 320 },
-  { x: 2, roi: 750, burn: 380 },
-  { x: 3, roi: 720, burn: 420 },
-  { x: 4, roi: 880, burn: 280 },
-  { x: 5, roi: 950, burn: 340 },
-  { x: 6, roi: 780, burn: 380 },
-  { x: 7, roi: 920, burn: 320 },
-  { x: 8, roi: 1020, burn: 400 },
-  { x: 9, roi: 850, burn: 280 },
+  { x: 0, burn: 850, roi: 350 },
+  { x: 1, burn: 720, roi: 420 },
+  { x: 2, burn: 780, roi: 550 },
+  { x: 3, burn: 650, roi: 480 },
+  { x: 4, burn: 700, roi: 620 },
+  { x: 5, burn: 850, roi: 580 },
+  { x: 6, burn: 620, roi: 650 },
+  { x: 7, burn: 780, roi: 620 },
+  { x: 8, burn: 900, roi: 680 },
+  { x: 9, burn: 750, roi: 700 },
 ]
 
 const GENERATED_EMAIL = {
@@ -89,9 +94,9 @@ export function AlertsPanel() {
         <h3 className="text-base font-semibold text-[#1A1525]">
           <span className="text-[#E07B5B]">EcoLogic</span> needs attention
         </h3>
-        <button type="button" className="bg-[#1A1525] text-white rounded-xl px-4 py-2 text-[13px] font-medium hover:bg-[#2A2535] transition-colors">
+        <Link href="/portfolio-health" className="bg-[#1A1525] text-white rounded-xl px-4 py-2 text-[13px] font-medium hover:bg-[#2A2535] transition-colors">
           Portfolio
-        </button>
+        </Link>
       </div>
 
       {/* Alert row */}

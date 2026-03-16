@@ -26,7 +26,7 @@ export function Sidebar({ activePage = "overview" }: SidebarProps) {
   return (
     <aside
       className="w-[220px] min-h-screen fixed left-0 top-0 flex flex-col z-10"
-      style={{ background: "rgba(26, 21, 37, 0.4)", backdropFilter: "blur(12px)" }}
+      style={{ background: "transparent" }}
     >
       {/* Nav items – top */}
       <nav className="flex flex-col items-stretch pt-6 px-3 flex-1">
