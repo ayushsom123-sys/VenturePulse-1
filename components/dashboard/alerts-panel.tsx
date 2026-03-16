@@ -111,7 +111,7 @@ export function AlertsPanel() {
       {/* Chart - always visible in default */}
       {view === "default" && (
         <div className="h-[160px] bg-white/50 rounded-xl p-3 mb-4 flex-shrink-0">
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={136} minHeight={136}>
             <LineChart data={chartData} margin={{ top: 8, right: 8, left: -10, bottom: 0 }}>
               <XAxis dataKey="x" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "#6B7280" }} />
               <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "#6B7280" }} domain={[0, 1000]} ticks={[0, 250, 500, 750, 1000]} width={32} />
